@@ -1,0 +1,4 @@
+# 禁止提交这个到代码仓库
+plugin/fakerpress/
+uploads/
+node_modules/

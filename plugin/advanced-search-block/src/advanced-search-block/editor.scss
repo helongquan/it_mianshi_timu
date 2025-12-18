@@ -1,0 +1,68 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-advanced-search-block {
+	padding: 20px;
+	background: #ffffff;
+	border-radius: 12px;
+	border: 1px solid rgba(0, 0, 0, 0.06);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+
+	.asb-field {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		margin-bottom: 16px;
+
+		label {
+			font-size: 13px;
+			font-weight: 600;
+			color: #1f2937; // 深灰，不是纯黑
+		}
+
+		input,
+		select {
+			height: 42px;
+			padding: 0 12px;
+			border-radius: 8px;
+			border: 1px solid #d1d5db;
+			font-size: 14px;
+			background-color: #f9fafb;
+			transition: all 0.2s ease;
+
+			&:focus {
+				outline: none;
+				border-color: #6366f1;
+				background-color: #ffffff;
+				box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+			}
+		}
+	}
+
+	.asb-tags {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+		gap: 10px;
+		margin-top: 8px;
+	}
+
+	.asb-tag {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		font-size: 13px;
+		color: #374151;
+		cursor: pointer;
+		&:hover {
+			color: #111827;
+		}
+
+		input {
+			accent-color: #6366f1;
+		}
+	}
+
+}
