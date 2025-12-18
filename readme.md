@@ -255,9 +255,19 @@ GET /wp-json/advanced-search/v1/posts
 
 #### 数据库恢复方式
 
+如果您使用的是bash环境，可以直接运行如下数据进行还原：
+
 ```bash
 docker exec -i wp_db mysql -u admin -pAdmin_123456 wordpress < db/database.sql
 ```
+
+如果您是使用的是powershell，您可以使用这个(在项目根目录下运行)：
+
+```powershell
+Get-Content db/database.sql | docker exec -i wp_db mysql -u admin -pAdmin_123456 wordpress
+```
+
+
 
 ---
 
@@ -280,5 +290,3 @@ docker exec -i wp_db mysql -u admin -pAdmin_123456 wordpress < db/database.sql
 * URL 状态同步
 * 分类 / 标签 / 分页（含加分项）
 * 可复现、可检查、可交付
-
-适用于技术面试评估与实际项目参考。
